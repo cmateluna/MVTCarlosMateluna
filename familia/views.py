@@ -8,8 +8,9 @@ from familia.models import Persona
 
 def index(request):
     personas = Persona.objects.all()
-    template = loader.get_template('familia/lista_familiares.html')
+    # template = loader.get_template('familia/lista_familiares.html')
     context = {
         'personas': personas,
     }
-    return HttpResponse(template.render(context, request))
+    # return HttpResponse(template.render(context, request))
+    return HttpResponse(context, request) 

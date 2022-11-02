@@ -1,0 +1,27 @@
+{% load bootstrap5 %}
+
+{# Load CSS and JavaScript #}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+{# Display django.contrib.messages as Bootstrap alerts #}
+{% bootstrap_message %}
+
+<!-- <esto es la cabecera/header> -->
+<ul class="nav bg-dark fixed">
+    <li class="nav-item">
+        <a class="nav-link active" href="{%url 'index' %}"> Miembros de Mi Familia</a>
+    </li>
+</ul>
+
+<!-- <esto es el cuerpo/body> -->
+{% block cuerpo %}
+{% endblock %}
+
+
+<!-- <esto es el pie/ footer > -->
+<ul class="nav bg-dark fixed-bottom justify-content-center">
+    <li class="nav-item">
+        <a class="nav-link active" href="{%url 'index' %}">Carlos Mateluna Brull - {% now 'd-m-Y' %}</a>
+    </li>
+</ul>    
